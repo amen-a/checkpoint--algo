@@ -1,0 +1,33 @@
+ALGORITHM stringer
+VAR
+    str:STRING;
+    nw,nv,i:integer:=0;
+    
+
+    
+BEGIN
+    read(str);
+    REPEAT
+    SWITCH (str[i]) DO
+    case " " : nw:=nw+1; BREAK;
+    case "a" : nv:=nv+1; BREAK;
+    case "e" : nv:=nv+1; BREAK;
+    case "i" : nv:=nv+1; BREAK;
+    case "o" : nv:=nv+1; BREAK;
+    case "u" : nv:=nv+1; BREAK;
+    case "y" : nv:=nv+1; BREAK;
+    case "." : nw:=nw+1; BREAK;
+    
+    default : 
+    END_SWITCH
+
+
+    i:=i+1;
+    UNTIL (str[i]=".")
+    write("The length of the sentence is",i+1)
+    write("The number of words in the sentence",nw)
+    write("The number of vowels",nv)
+
+
+
+END
